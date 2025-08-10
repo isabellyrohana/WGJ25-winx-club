@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RotationPlatforms : MonoBehaviour
 {
-    [SerializeField]
-    public bool turnOn;
+  
     [SerializeField]
     public GameObject platformUpObject, platformMiddleObject, platformDownObject;
     [SerializeField]
@@ -15,16 +14,15 @@ public class RotationPlatforms : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        turnOn = false;
+        RotatePlatforms(platformUpObject, pointUpObject, platformMiddleObject, pointMiddleObject, platformDownObject, pointDownObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!turnOn)
-        {
-            RotatePlatforms(platformUpObject, pointUpObject, platformMiddleObject, pointMiddleObject, platformDownObject, pointDownObject);
-        }
+        
+           
+        
     }
 
 
@@ -41,11 +39,14 @@ public class RotationPlatforms : MonoBehaviour
 
     void RotatePlatforms(GameObject platformUp, Vector3 pointUp, GameObject platformMiddle, Vector3 pointMiddle, GameObject platformDown, Vector3 pointDown)
     {
-        platformUp.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
-        platformMiddle.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
-        platformDown.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+        platformUp.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
+        platformUp.GetComponent<Transform>().position = pointDown;
 
-        StartCoroutine(MovePlatform(platformDown, pointUp));
+        platformMiddle.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
+
+        //StartCoroutine(MovePlatform(platformDown, pointUp));
+        platformDown.GetComponent<Transform>().position = pointUp;
+        platformDown.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
     }
 
     IEnumerator MovePlatform(GameObject platformDown, Vector3 targetPosition)
@@ -59,7 +60,7 @@ public class RotationPlatforms : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        platformDown.GetComponent<Transform>().position = targetPosition;
+        
         StopCoroutine("MovePlatform");
     }
     
