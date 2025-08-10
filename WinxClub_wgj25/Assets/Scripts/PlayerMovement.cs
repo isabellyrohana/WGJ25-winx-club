@@ -9,13 +9,13 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private SpriteRenderer caprichosoSprite;
     [SerializeField] private SpriteRenderer garantidoSprite;
-    
-    void Start()
+
+    private void Start()
     {
         caprichosoSprite.flipX = true;
     }
-    
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
         var horizontalMovement = Input.GetAxis("Horizontal");
         
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite(horizontalMovement);
     }
 
-    void FlipSprite(float horizontalMovement)
+    private void FlipSprite(float horizontalMovement)
     {
         if (horizontalMovement > 0)
         {

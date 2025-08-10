@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5800579984179005617}
   m_Layer: 0
   m_Name: MainPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97045a74f5e288a47b511350309b8d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  garantidoRigidbody: {fileID: 0}
+  garantidoRigidbody: {fileID: 5800579984179005617}
   caprichosoRigidbody: {fileID: 0}
-  movementSpeed: 3
+  moveSpeed: 1
+  caprichosoSprite: {fileID: 620890775058204494}
+  garantidoSprite: {fileID: 0}
 --- !u!65 &6729019292283511043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,8 +127,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6765727396353090900}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c3b3210790ee07b44b87162c0362c445, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
