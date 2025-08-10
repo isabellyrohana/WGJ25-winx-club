@@ -7,12 +7,36 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float moveSpeed = 1.0f;
     
+    [SerializeField] private SpriteRenderer caprichosoSprite;
+    [SerializeField] private SpriteRenderer garantidoSprite;
+    
+    void Start()
+    {
+        caprichosoSprite.flipX = true;
+    }
+    
     void FixedUpdate()
     {
-        float horizontalMovement = Input.GetAxis("Horizontal");
+        var horizontalMovement = Input.GetAxis("Horizontal");
         
-        Vector3 move = new Vector3(horizontalMovement, 0f, 0f) * (moveSpeed * Time.fixedDeltaTime);
+        var move = new Vector3(horizontalMovement, 0f, 0f) * (moveSpeed * Time.fixedDeltaTime);
         garantidoRigidbody.MovePosition(garantidoRigidbody.position + move);
         caprichosoRigidbody.MovePosition(caprichosoRigidbody.position - move);
+        
+        FlipSprite(horizontalMovement);
+    }
+
+    void FlipSprite(float horizontalMovement)
+    {
+        if (horizontalMovement > 0)
+        {
+            caprichosoSprite.flipX = true;
+            garantidoSprite.flipX = false;
+        }
+        else if (horizontalMovement < 0)
+        {
+            caprichosoSprite.flipX = false;
+            garantidoSprite.flipX = true;
+        }
     }
 }
