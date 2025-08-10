@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody rigidbody;
-    
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
+    [SerializeField] private Rigidbody garantidoRigidbody;
+    [SerializeField] private Rigidbody caprichosoRigidbody;
     
     void FixedUpdate()
     {
-        rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        garantidoRigidbody.velocity = new Vector2(-Input.GetAxis("Horizontal"), 0);
+        caprichosoRigidbody.velocity = new Vector2(Input.GetAxis("Horizontal"), 0);
     }
 }
