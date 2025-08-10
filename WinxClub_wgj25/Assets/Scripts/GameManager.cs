@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public int CollectableCount { get; private set; }
 
     [SerializeField] PlayerMovement caprichosoMovement;
-    [SerializeField] PlayerMovement garantidoMovement;
     [SerializeField] private Image finishImage;
 
     private void Awake()
@@ -54,6 +53,5 @@ public class GameManager : MonoBehaviour
     {
         finishImage.gameObject.SetActive(true);
         caprichosoMovement.StopPlayerMovement();
-        garantidoMovement.StopPlayerMovement();
     }
 }
