@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    [SerializeField] private Rigidbody garantidoRigidbody;
+    [SerializeField] private Rigidbody caprichosoRigidbody;
     
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
+    [SerializeField] private float moveSpeed = 1.0f;
     
     void FixedUpdate()
     {
-        rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        float horizontalMovement = Input.GetAxis("Horizontal");
+        
+        Vector3 move = new Vector3(horizontalMovement, 0f, 0f) * (moveSpeed * Time.fixedDeltaTime);
+        garantidoRigidbody.MovePosition(garantidoRigidbody.position + move);
+        caprichosoRigidbody.MovePosition(caprichosoRigidbody.position - move);
     }
 }
