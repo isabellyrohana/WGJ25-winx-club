@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer caprichosoSprite;
     [SerializeField] private SpriteRenderer garantidoSprite;
 
+    private bool _canMove = true;
+
     private void Start()
     {
         caprichosoSprite.flipX = true;
@@ -17,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!_canMove) return;
+        
         var horizontalMovement = Input.GetAxis("Horizontal");
         
         var move = new Vector3(horizontalMovement, 0f, 0f) * (moveSpeed * Time.fixedDeltaTime);
@@ -38,5 +42,10 @@ public class PlayerMovement : MonoBehaviour
             caprichosoSprite.flipX = false;
             garantidoSprite.flipX = true;
         }
+    }
+
+    public void StopPlayerMovement()
+    {
+        _canMove = false;
     }
 }

@@ -2,11 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int CollectableCount { get; private set; }
+
+    [SerializeField] PlayerMovement caprichosoMovement;
+    [SerializeField] PlayerMovement garantidoMovement;
+    [SerializeField] private Image finishImage;
 
     private void Awake()
     {
@@ -33,6 +38,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log($"Itens Quantitiy {CollectableCount}");
         }
+
+        if (CollectableCount >= 2)
+        {
+            ShowEndGame();
+        }
     }
 
     public void IncreaseCollectableCount()
@@ -40,4 +50,10 @@ public class GameManager : MonoBehaviour
         CollectableCount++;
     }
     
+    private void ShowEndGame()
+    {
+        finishImage.gameObject.SetActive(true);
+        caprichosoMovement.StopPlayerMovement();
+        garantidoMovement.StopPlayerMovement();
+    }
 }
