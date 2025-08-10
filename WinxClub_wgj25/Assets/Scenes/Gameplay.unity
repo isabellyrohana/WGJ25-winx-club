@@ -377,7 +377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245dbbad73c614408b484ee9e8853361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnOn: 1
   platformUpObject: {fileID: 857144477}
   platformMiddleObject: {fileID: 2104946601}
   platformDownObject: {fileID: 381574020}
