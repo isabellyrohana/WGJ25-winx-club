@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &337050108115554151
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 620890775058204494, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 620890775058204494, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4267555
+      objectReference: {fileID: 0}
+    - target: {fileID: 620890775058204494, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.084104665
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213542607975894951, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerCaprichoso
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1213542607975894951, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8059879225692031339}
+  m_SourcePrefab: {fileID: 100100000, guid: ab632125fc2ddae48b9a81b800b42ed6, type: 3}
+--- !u!1 &1475544445989961920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1213542607975894951, guid: ab632125fc2ddae48b9a81b800b42ed6,
+    type: 3}
+  m_PrefabInstance: {fileID: 337050108115554151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8059879225692031339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475544445989961920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97045a74f5e288a47b511350309b8d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  garantidoRigidbody: {fileID: 2436401202791628291, guid: 0bf28671c34496a4099c77176ac04a06,
+    type: 3}
+  caprichosoRigidbody: {fileID: 6112156048280717270}
+--- !u!54 &6112156048280717270 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5800579984179005617, guid: ab632125fc2ddae48b9a81b800b42ed6,
+    type: 3}
+  m_PrefabInstance: {fileID: 337050108115554151}
+  m_PrefabAsset: {fileID: 0}
