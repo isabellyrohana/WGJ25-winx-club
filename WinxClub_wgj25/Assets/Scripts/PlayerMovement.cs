@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         var horizontalMovement = Input.GetAxis("Horizontal");
         
         var move = new Vector3(horizontalMovement, 0f, 0f) * (moveSpeed * Time.fixedDeltaTime);
-        garantidoRigidbody.MovePosition(garantidoRigidbody.position + move);
-        caprichosoRigidbody.MovePosition(caprichosoRigidbody.position - move);
+        garantidoRigidbody.MovePosition(garantidoRigidbody.position - move);
+        caprichosoRigidbody.MovePosition(caprichosoRigidbody.position + move);
         
         FlipSprite(horizontalMovement);
     }
