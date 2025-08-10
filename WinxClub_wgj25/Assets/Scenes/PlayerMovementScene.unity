@@ -905,6 +905,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802070493}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &887759976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7732175547777427834, guid: ab632125fc2ddae48b9a81b800b42ed6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984332623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &887759979
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887759976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 335268c5a12f275499a72d54824dc7ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1041516729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1535,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8904078876690473598, guid: 786dbc8630102074eb097a22af067c51,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1923276921}
   m_SourcePrefab: {fileID: 100100000, guid: 786dbc8630102074eb097a22af067c51, type: 3}
 --- !u!114 &1580174268 stripped
 MonoBehaviour:
@@ -1808,6 +1839,33 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 1462380364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923276919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8904078876690473598, guid: 786dbc8630102074eb097a22af067c51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462380364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1923276921
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923276919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f8ca102dda51b34fb888f4e23d038c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1984332623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1838,6 +1896,16 @@ PrefabInstance:
       objectReference: {fileID: 1656588777}
     - target: {fileID: 2617129323442731647, guid: ab632125fc2ddae48b9a81b800b42ed6,
         type: 3}
+      propertyPath: garantidoAnimator
+      value: 
+      objectReference: {fileID: 887759979}
+    - target: {fileID: 2617129323442731647, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: caprichosoAnimator
+      value: 
+      objectReference: {fileID: 887759979}
+    - target: {fileID: 2617129323442731647, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
       propertyPath: garantidoRigidbody
       value: 
       objectReference: {fileID: 1913538581}
@@ -1854,7 +1922,7 @@ PrefabInstance:
     - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.9
+      value: 18.02
       objectReference: {fileID: 0}
     - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
         type: 3}
@@ -1899,7 +1967,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7732175547777427834, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 887759979}
   m_SourcePrefab: {fileID: 100100000, guid: ab632125fc2ddae48b9a81b800b42ed6, type: 3}
 --- !u!1 &1999985941
 GameObject:

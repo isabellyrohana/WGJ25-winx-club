@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private SpriteRenderer caprichosoSprite;
     [SerializeField] private SpriteRenderer garantidoSprite;
+    
+    [SerializeField] private Animator garantidoAnimator;
+    [SerializeField] private Animator caprichosoAnimator;
 
     private bool _canMove = true;
 
@@ -26,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
         var move = new Vector3(horizontalMovement, 0f, 0f) * (moveSpeed * Time.fixedDeltaTime);
         garantidoRigidbody.MovePosition(garantidoRigidbody.position - move);
         caprichosoRigidbody.MovePosition(caprichosoRigidbody.position + move);
+        
+        garantidoAnimator.SetFloat("Speed", Math.Abs(horizontalMovement));
+        caprichosoAnimator.SetFloat("Speed", Math.Abs(horizontalMovement));
         
         FlipSprite(horizontalMovement);
     }
