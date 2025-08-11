@@ -36,7 +36,7 @@ public class SceneController : MonoBehaviour
             Debug.LogWarning("Primeira cena já está carregada.");
             return;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void LoadSceneByName(string sceneName)
