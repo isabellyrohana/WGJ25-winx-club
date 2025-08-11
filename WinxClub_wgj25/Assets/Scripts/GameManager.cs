@@ -26,8 +26,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        
-        DontDestroyOnLoad(gameObject);
     }
     
     private void Start()
@@ -39,7 +37,15 @@ public class GameManager : MonoBehaviour
 
     private void OnClickBackButton()
     {
+        ResetGame();
         SceneController.Instance.LoadPreviousScene();
+    }
+
+    private void ResetGame()
+    {
+        CollectableCount = 0;
+        canvasGroup.alpha = 0;
+        hasGameEnded = false;
     }
 
     private void Update()
