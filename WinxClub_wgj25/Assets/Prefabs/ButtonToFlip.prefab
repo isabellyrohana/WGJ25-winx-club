@@ -122,9 +122,9 @@ MonoBehaviour:
   platformUpObject: {fileID: 0}
   platformMiddleObject: {fileID: 0}
   platformDownObject: {fileID: 0}
-  pointUpObject: {x: 0.0000005159247, y: 3.42, z: 2.01}
-  pointMiddleObject: {x: 0.0000005159247, y: 0.03, z: 2.01}
-  pointDownObject: {x: 0.0000005159247, y: -4.06, z: 2.01}
+  pointUpObject: {x: 0.0000005159247, y: 6.3, z: 2.01}
+  pointMiddleObject: {x: 0.0000005159247, y: 0.52, z: 2.01}
+  pointDownObject: {x: 0.0000005159247, y: -5.94, z: 2.01}
 --- !u!54 &5943694761579512382
 Rigidbody:
   m_ObjectHideFlags: 0
