@@ -9,34 +9,18 @@ public class RotationPlatforms : MonoBehaviour
     public GameObject platformUpObject, platformMiddleObject, platformDownObject;
     [SerializeField]
     public Vector3 pointUpObject, pointMiddleObject, pointDownObject;
-    public float duration = 1;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        RotatePlatforms(platformUpObject, pointUpObject, platformMiddleObject, pointMiddleObject, platformDownObject, pointDownObject);
+        //this scripts are here on Start just for test them.
+        //example: call this function when turn on/off platforms by red/blue buttons
+        //TurnOnOffPlatform(platformUpObject);
+        //example: call this functions to flip platforms by clicking yellow button
+        //RotatePlatforms(platformUpObject, pointUpObject, platformMiddleObject, pointMiddleObject, platformDownObject, pointDownObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-           
-        
-    }
-
-
-    void TurnOnPlatform(GameObject platform, string color)
-    {
-        platform.SetActive(true);
-    }
-
-
-    void TurnOffPlatform(GameObject platform, string color)
-    {
-        platform.SetActive(false);
-    }
-
+   
     void RotatePlatforms(GameObject platformUp, Vector3 pointUp, GameObject platformMiddle, Vector3 pointMiddle, GameObject platformDown, Vector3 pointDown)
     {
         platformUp.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
@@ -44,24 +28,8 @@ public class RotationPlatforms : MonoBehaviour
 
         platformMiddle.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
 
-        //StartCoroutine(MovePlatform(platformDown, pointUp));
         platformDown.GetComponent<Transform>().position = pointUp;
         platformDown.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
     }
 
-    IEnumerator MovePlatform(GameObject platformDown, Vector3 targetPosition)
-    {
-        float timeElapsed = 0;
-        Vector3 startPosition = platformDown.GetComponent<Transform>().position;
-
-        while (timeElapsed < duration)
-        {
-            platformDown.transform.position = Vector3.Lerp(startPosition, targetPosition, timeElapsed / duration);
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-        
-        StopCoroutine("MovePlatform");
-    }
-    
 }
