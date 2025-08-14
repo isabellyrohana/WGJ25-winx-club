@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +14,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Button backButton;
+    
+    private int feathersCount;
 
-    private bool hasGameEnded = false;
+    private bool hasGameEnded;
     
     private void Awake()
     {
@@ -30,8 +33,10 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        feathersCount = 3;
         CollectableCount = 0;
         canvasGroup.alpha = 0;
+        hasGameEnded = false;
         backButton.onClick.AddListener(OnClickBackButton);
     }
 
@@ -50,26 +55,31 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        // TODO: REMOVE THIS IS FOR TEST
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log($"Itens Quantitiy {CollectableCount}");
-        }
-
-        if (CollectableCount >= 2 && !hasGameEnded)
-        {
-            hasGameEnded = true;
-            ShowEndGame();
         }
     }
 
     public void IncreaseCollectableCount()
     {
         CollectableCount++;
+
+        if (CollectableCount < feathersCount || hasGameEnded) return;
+        hasGameEnded = true;
+        ShowEndGame();
+
     }
     
     private void ShowEndGame()
     {
         canvasGroup.alpha = 1;
         caprichosoMovement.StopPlayerMovement();
+    }
+    
+    public void RegisterFeather(ICollectable collectable)
+    {
+        collectable.OnCollected += IncreaseCollectableCount;
     }
 }

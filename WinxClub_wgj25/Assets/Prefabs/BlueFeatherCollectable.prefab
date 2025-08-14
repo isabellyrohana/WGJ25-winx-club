@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1051808168118261345}
   - component: {fileID: 3063069569377280798}
-  - component: {fileID: 488652251392002870}
   - component: {fileID: 5771209013465805370}
+  - component: {fileID: 6124585460979359642}
   m_Layer: 0
   m_Name: BlueFeatherCollectable
   m_TagString: Untagged
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &488652251392002870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5937434992436562945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7461e059f272421da777653d6a21d130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5771209013465805370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117,5 +105,17 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 10, z: 20}
+  m_Size: {x: 10, y: 10, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6124585460979359642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937434992436562945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c94a50951d6468c8d025bd37ff483d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
