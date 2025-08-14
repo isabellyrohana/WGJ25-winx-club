@@ -47,11 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97045a74f5e288a47b511350309b8d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  garantidoRigidbody: {fileID: 5800579984179005617}
-  caprichosoRigidbody: {fileID: 0}
-  moveSpeed: 1
+  garantidoRigidbody: {fileID: 0}
+  caprichosoRigidbody: {fileID: 5800579984179005617}
+  moveSpeed: 12
   caprichosoSprite: {fileID: 620890775058204494}
   garantidoSprite: {fileID: 0}
+  garantidoAnimator: {fileID: 0}
+  caprichosoAnimator: {fileID: 4130480495030774301}
 --- !u!65 &6729019292283511043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4260342541287460238}
   - component: {fileID: 620890775058204494}
+  - component: {fileID: 4130480495030774301}
   m_Layer: 0
   m_Name: PlayerImage
   m_TagString: Untagged
@@ -184,3 +187,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4130480495030774301
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732175547777427834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 335268c5a12f275499a72d54824dc7ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
