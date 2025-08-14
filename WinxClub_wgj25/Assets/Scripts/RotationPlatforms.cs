@@ -6,6 +6,7 @@ public class RotationPlatforms : MonoBehaviour
 {
     [SerializeField]
     public GameObject caprichoso, garantido;
+    public SpriteRenderer scenario;
 
     [SerializeField]
     public GameObject platformUpObject, platformMiddleObject, platformDownObject;
@@ -62,6 +63,7 @@ public class RotationPlatforms : MonoBehaviour
 
     void RotatePlatforms(GameObject platformUp, Vector3 pointUp, GameObject platformMiddle, Vector3 pointMiddle, GameObject platformDown, Vector3 pointDown)
     {
+        scenario.flipX = true;
         platformUp.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, -180);
         platformUp.GetComponent<Transform>().position = pointDown;
 
