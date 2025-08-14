@@ -13,7 +13,7 @@ public class CutSceneManager : MonoBehaviour
     [SerializeField]
     public GameObject[] Ballons;
 
-    int index;
+    int index =1;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +40,8 @@ public class CutSceneManager : MonoBehaviour
             {
                 case 0:
                     {
-                        cenaInPlay.GetComponent<Image>().sprite = cenas[index];
-                        Ballons[0].SetActive(true);
+                        //cenaInPlay.GetComponent<Image>().sprite = cenas[index];
+                        //Ballons[0].SetActive(true);
                         break;
                     }
                 case 1:
