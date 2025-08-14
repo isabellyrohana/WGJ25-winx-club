@@ -442,7 +442,7 @@ PrefabInstance:
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
       propertyPath: color
-      value: red
+      value: vermelho
       objectReference: {fileID: 0}
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
@@ -1343,14 +1343,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
-      propertyPath: platforms.Array.size
-      value: 1
+      propertyPath: color
+      value: azul
       objectReference: {fileID: 0}
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
       propertyPath: platforms.Array.data[0]
       value: 
       objectReference: {fileID: 1698135260}
+    - target: {fileID: 4129813806425117809, guid: 54578094cefdf4323b3d09f4c1ed89b7,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8750611253842021032, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
       propertyPath: m_Name
@@ -1469,7 +1474,7 @@ PrefabInstance:
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
       propertyPath: color
-      value: red
+      value: vermelho
       objectReference: {fileID: 0}
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
@@ -2041,6 +2046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
         type: 3}
+      propertyPath: color
+      value: vermelho
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853987923038118558, guid: 54578094cefdf4323b3d09f4c1ed89b7,
+        type: 3}
       propertyPath: platforms.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2436,6 +2446,11 @@ PrefabInstance:
       propertyPath: garantidoRigidbody
       value: 
       objectReference: {fileID: 962035860}
+    - target: {fileID: 5800579984179005617, guid: ab632125fc2ddae48b9a81b800b42ed6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2444,7 +2459,7 @@ PrefabInstance:
     - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.94
+      value: 8.72
       objectReference: {fileID: 0}
     - target: {fileID: 6765727396353090900, guid: ab632125fc2ddae48b9a81b800b42ed6,
         type: 3}

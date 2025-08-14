@@ -11,15 +11,15 @@ public class InteractPlatform : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "CAPRICHOSO" && color == "azul")
+        if(col.gameObject.tag == "Caprichoso" && color == "azul")
         {
             Debug.Log("colidiu");
             TurnOnOffPlatform();
         }
-        if(col.gameObject.tag == "GARANTIDO" && color == "vermelho")
+        if(col.gameObject.tag == "Garantido" && color == "vermelho")
             TurnOnOffPlatform();
-        if(col.gameObject.tag == "BOIOLA" && color == "colorido")
-            TurnOnOffPlatform();
+        //if(col.gameObject.tag == "BOIOLA" && color == "colorido")
+          //  TurnOnOffPlatform();
     }
      void TurnOnOffPlatform()
     {
