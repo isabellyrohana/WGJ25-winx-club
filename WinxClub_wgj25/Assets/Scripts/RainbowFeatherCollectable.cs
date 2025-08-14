@@ -1,8 +1,16 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 
 public class RainbowFeatherCollectable : MonoBehaviour, ICollectable
 {
+    public event Action OnCollected;
+
+    private void Start()
+    {
+        GameManager.Instance.RegisterFeather(this);
+    }
+    
     public bool CanCollect(Collider other)
     {
         return other.CompareTag("Caprichoso") || other.CompareTag("Garantido");
@@ -12,7 +20,7 @@ public class RainbowFeatherCollectable : MonoBehaviour, ICollectable
     {
         if (!CanCollect(other)) return;
         Debug.Log("Rainbow Feather Collectable");
-        GameManager.Instance.IncreaseCollectableCount();
         gameObject.SetActive(false);
+        OnCollected?.Invoke();
     }
 }
