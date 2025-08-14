@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator garantidoAnimator;
     [SerializeField] private Animator caprichosoAnimator;
 
-    private bool _canMove = true;
+    private bool _canMove;
 
     private void Start()
     {
         caprichosoSprite.flipX = true;
+        garantidoAnimator.enabled = true;
+        caprichosoAnimator.enabled = true;
+        _canMove = true;
     }
 
     private void FixedUpdate()
@@ -54,5 +57,7 @@ public class PlayerMovement : MonoBehaviour
     public void StopPlayerMovement()
     {
         _canMove = false;
+        garantidoAnimator.enabled = false;
+        caprichosoAnimator.enabled = false;
     }
 }
